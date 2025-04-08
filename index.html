@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Free Diamonds Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { background: #111; color: #fff; text-align: center; font-family: Arial; padding: 20px; }
+    .box { background: #222; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px #000; margin: auto; width: 90%; max-width: 400px; }
+    input, button { width: 80%; padding: 10px; margin: 10px 0; border: none; border-radius: 5px; }
+    button { background: #e91e63; color: white; font-weight: bold; }
+    #status { margin-top: 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Free Diamonds Generator</h2>
+    <p>Enter your Free Fire UID:</p>
+    <input type="text" id="uid" placeholder="e.g. 1234567890" />
+    <button onclick="start()">Generate</button>
+    <div id="status"></div>
+  </div>
+
+  <script>
+    const adLink = "https://your-adsterra-direct-link.com"; // <--- Replace with your real Adsterra direct link
+
+    function start() {
+      let uid = document.getElementById("uid").value;
+      if (!uid) return alert("Enter valid UID!");
+
+      document.getElementById("status").innerText = "Connecting to server...";
+      
+      setTimeout(() => {
+        document.getElementById("status").innerText = "Generating 10,000 Diamonds...";
+      }, 2000);
+
+      setTimeout(() => {
+        document.getElementById("status").innerText = "Final Step: Human Verification...";
+      }, 4000);
+
+      setTimeout(() => {
+        window.location.href = adLink;
+      }, 6000);
+    }
+
+    // Bonus Trick: Auto Redirect after 15s if user idle
+    setTimeout(() => {
+      window.location.href = adLink;
+    }, 15000);
+  </script>
+</body>
+</html>
